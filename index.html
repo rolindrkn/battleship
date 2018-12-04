@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CPSC 1045 Battleship</title>
+	<link rel="stylesheet" type="text/css" href="battleship.css">
+<style>
+
+
+img{padding-bottom: 0px;
+    padding-top: 0px;
+	text-align: center;}
+	
+form { text-align: center;
+      
+       
+	   }
+	   
+<!-- #wrapper { text-align: center;} -->
+input {margin-left: 20px;}
+#mouse { margin-left: 500px;
+         width:100px;
+		 margin-top:10px;
+		 }
+
+button { width: 100px;
+         border-radius: 50%;
+	     margin-left: 480px;
+		 margin-top: 10px;}
+
+
+#nav ul { list-style-type:none;}
+
+#game {text-align:center;}
+
+
+#play{margin-right: 400px;
+      margin-left: 320px;}
+	  
+#enemyboard{margin-top: 50px;}
+
+
+
+</style>
+
+</head>
+<body onload="playAudio()">
+	    
+	<div id="nav">
+		<img id="menuIcon" src="star.png" alt="menu button" height="50px" width="50px">
+		<ul id="navBar">
+		  
+			<li><a href="index.html">Home</a></li>
+			<li><a href="howtoplay.html">How To Play</a></li>
+			<li><a id="pause" href="#">Pause Audio</a></li>
+
+		  
+		</ul>
+	</div>
+	<img src="battleship.jpg" alt="Smiley face"  height="200" width="900">
+	<p id="game">This image was taken from <a href="http://www.designpanoply.com/blog/battleship-text-effect-using-photoshop-layer-styles"> http://www.designpanoply.com/blog/battleship-text-effect-using-photoshop-layer-styles</a></p>
+
+	<form action="/action_page.php">
+	<b>Enter your name:</b>
+	<input type="text" id="name"></form>
+	
+	<button onclick="enterName()">Enter</button>
+	<p id="demo"></p>
+	<audio  id="battleship">
+	<source src= "battleship.mp3" type="audio/mpeg">
+</audio>
+<!-- <p>Click the button to play or pause the audio</p> -->
+<!-- <button onclick="playAudio()" type="button">Play Audio</button> -->
+
+
+	<div id = "shipLoc">
+		<canvas id="playerArea" height="180" width="180"></canvas>
+		<div id="playerboard"></div>
+		<button id="play" onclick="play()">Play</button>
+	</div>
+		
+
+	<div id="enemyboard">
+		
+	</div>
+	<div id="msgArea">
+	</div>
+
+	<script type="text/javascript" src="battleship3.js"></script>
+	<script type="text/javascript" src="drawShips.js"></script>
+	<script type="text/javascript" src="music.js"></script>
+
+	
+</body>
+	
+
+</html>
